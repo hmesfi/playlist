@@ -1,0 +1,74 @@
+[
+        {
+            "song title" : "Awkward",
+            "artist": "SZA",
+            "genre" : ["rnb"],
+            "year" : "2022"
+        },
+        {
+            "song title" : "Garage Rooftop",
+            "artist": "Q",
+            "genre" : ["alt rnb"],
+            "year" : "2020"
+        },
+        {
+            "song title" : "Drip or Drown",
+            "artist": "Gunna",
+            "genre" : ["rap"],
+            "year" : "2017"
+        },
+        {
+            "song title" : "New Person, Same Old Mistakes",
+            "artist": "Tame Impala",
+            "genre" : ["psychedelic rock", "alternative", "indie"],
+            "year" : "2015"
+        },
+        {
+            "song title" : "Sidewalks",
+            "artist": "The Weeknd ft. Kendrick Lamar",
+            "genre" : ["rnb", "soul"],
+            "year" : "2016"
+        },
+        {
+            "song title" : "Thunder",
+            "artist": "Roy Blair",
+            "genre" : ["bedroom pop"],
+            "year" : "2017"
+        },
+        {
+            "song title" : "Bad Luck",
+            "artist": "Brent Faiyaz",
+            "genre" : ["rnb"],
+            "year" : "2022"
+        },
+        {
+            "song title" : "Time Will Tell",
+            "artist": "Bob Marley and The Wailers",
+            "genre" : ["reggae"],
+            "year" : "1978"
+        },
+        {
+            "song title" : "Outside",
+            "artist": "Yeat",
+            "genre" : ["rap"],
+            "year" : "2022"
+        },
+        {
+            "song title" : "The Worst in Me",
+            "artist": "Kaytranada ft. Tinashe",
+            "genre" : ["house", "rnb", "electronic"],
+            "year" : "2019"
+        },
+        {
+            "song title" : "Venom",
+            "artist": "Ravyn Lenae",
+            "genre" : ["rnb"],
+            "year" : "2022"
+        },
+        {
+            "song title" : "Just Friends",
+            "artist": "Amy Winehouse",
+            "genre" : ["soul", "rnb"],
+            "year" : "2006"
+        }
+]
