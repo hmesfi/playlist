@@ -8,11 +8,26 @@
         </style>
 <body>
     <script language="javascript">
-        fetch("mylibrary.json")
-        .then(response => response.json())
-        .then((json) => console.log(json));
-                var library = JSON.parse(data);
-                console.log(library);
+        
+        /* loads external json file */
+        function loadJSON() {
+            req = new XMLHttpRequest();
+
+            if (!req){
+                alert("Unable to create HTTPRequest object");
+                return;
+            }
+            request.open("GET", "https://hmesfi.github.io/playlist/mylibray.json", true);
+
+        }
+
+        function getData() {
+            console.log(request.responseText);
+            // if(this.readyState==4 && this.status==200)
+            //     var data=this.responseText;
+            //     var info=JSON.parse(data);
+        }
+        request.send();
     </script>
 
 
