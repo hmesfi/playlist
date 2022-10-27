@@ -17,21 +17,19 @@
                 alert("Unable to create HTTPRequest object");
                 return;
             }
-            request.open("GET", "https://hmesfi.github.io/playlist/mylibray.json", true);
+            req.open("GET", "https://hmesfi.github.io/playlist/mylibray.json", true);
 
         }
 
-        function getData() {
+        req.onload = function getData() {
             console.log(request.responseText);
             // if(this.readyState==4 && this.status==200)
             //     var data=this.responseText;
             //     var info=JSON.parse(data);
         }
-        request.send();
+        req.send();
     </script>
 
 
 </body>
 
-
-</html>
