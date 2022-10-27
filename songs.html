@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script language="javascript">
+        var json_arr = new Array();
 
+        // this function is the run function essentially. it runs everything, getting the
+        // json file from my github, and as soon as the request is sent and the info
+        // is obtained, filters through the file and outputs the results.
+        function processFile() { 
+                req = new XMLHttpRequest();
+    
+                if (!req){
+                    alert("Unable to create HTTPRequest object");
+                }
+                req.open("GET", "https://hmesfi.github.io/playlist/mylibrary.json", true);
+    
+                req.onload = function() {
+                    // part two:
+                        songdata = JSON.stringify(req.responseText);
+                        libtext = JSON.parse(songdata);
+                        result = JSON.parse(req.responseText);
+                        document.getElementById("serialized").innerHTML = libtext;
+                    
+                    //part three
+                        var htmlString = "";
+     
+                        for (i = 0; i < result.length; i++) {
+                            htmlString += "<p>" + result[i].title + " <br> " + "Artist: " +
+                             result[i].artist + "<br>" + 
+                            "Genres: "  + result[i].genre.join(", ") + "<br>" 
+                            + "Released in: " + result[i].year + "</p>" + "<br>";
+                            json_arr.push(result[i]);
+                        } 
+                        document.getElementById("friendly").innerHTML = htmlString;
+                }
+                req.send();
+            }
+
+            // when user hits the submit button, this function is called and it filters through
+            // the data to select all the songs within the json array that are categorized in 
+            // the same genre and prints them onto the page
+            function pickGenre(){
+                    var num;
+                    index = document.getElementById("genres").selectedIndex ;
+                
+                    if (index >= 0) {
+                        num = document.getElementById("genres").options[index].value;
+                    }
+
+                    var filteredSongs = "";
+                
+            
+                for (var i = 0; i < json_arr.length; i++) {
+                    for (var r = 0; r < json_arr[i].genre.length; r++){
+                        if (num == json_arr[i].genre[r]){
+                         filteredSongs += json_arr[i].title + " " + "<br>";
+                        }
+                    }
+                    document.getElementById("filtered").innerHTML = filteredSongs;
+                 }
+            }
+
+        </script>
     </head>
-        <style>
+    <style>
 
-        </style>
-<body>
-    <h1>Hey lol.</h1>
-    <script language="javascript">
-        
-        /* loads external json file */
-            req = new XMLHttpRequest();
+    </style>
 
-            if (!req){
-                alert("Unable to create HTTPRequest object");
-            }
-            req.open("GET", "https://hmesfi.github.io/playlist/mylibray.json", true);
+<body onload="processFile()">
+    <h1>Part 2: Serialized String</h1>
+    <div id="serialized">
+    </div>
+    <br><br><br>
+    <h1>Part 3: User friendly display!</h1>
+    <div id="friendly">   
+    </div>
+    <br>
+    <h1>Part 4: Filter the Data</h1>
+    <form id="form" onsubmit="pickGenre()" method="post">
+        <label for="genres">Please Pick a Genre: </label>
+        <select id="genres">
+                <option value="alt rnb"> alt rnb </option>
+                <option value="rap"> rap </option>
+                <option value="alternative"> Pop </option>
+                <option value="rnb"> rnb </option>
+                <option value="soul"> soul </option>
+                <option value="psychedelic rock"> psychedelic rock </option>
+                <option value="bedroom pop"> pedroom pop </option>
+                <option value="reggae"> reggae </option>
+                <option value="house"> house </option>
+                <option value="trap"> trap </option>
+                <option value="electronic"> electronic </option>
+        </select>
+        <button onclick="pickGenre()" type="button" id="filter" > Filter Library </button>
+    </form>
 
-            req.onload = function() {
-                console.log(request.responseText);
-                // if(this.readyState==4 && this.status==200)
-                //     var data=this.responseText;
-                //     var info=JSON.parse(data);
-            }
-            req.send();
-    </script>
-
+    <div id="filtered">
+    </div>
+    <br><br><br>
 </body>
 
 
 </html>
-
