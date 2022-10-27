@@ -7,10 +7,10 @@
 
         </style>
 <body>
+    <h1>Hey lol.</h1>
     <script language="javascript">
         
         /* loads external json file */
-        function loadJSON() {
             req = new XMLHttpRequest();
 
             if (!req){
@@ -19,17 +19,17 @@
             }
             req.open("GET", "https://hmesfi.github.io/playlist/mylibray.json", true);
 
-        }
-
-        req.onload = function getData() {
-            console.log(request.responseText);
-            // if(this.readyState==4 && this.status==200)
-            //     var data=this.responseText;
-            //     var info=JSON.parse(data);
-        }
-        req.send();
+            req.onload = function() {
+                console.log(request.responseText);
+                // if(this.readyState==4 && this.status==200)
+                //     var data=this.responseText;
+                //     var info=JSON.parse(data);
+            }
+            req.send();
     </script>
 
-
 </body>
+
+
+</html>
 
