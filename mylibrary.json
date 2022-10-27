@@ -2,19 +2,19 @@
         {
             "title" : "Awkward",
             "artist": "SZA",
-            "genre" : ["rnb"],
+            "genre" : ["rnb", "soul"],
             "year" : "2022"
         },
         {
             "title" : "Garage Rooftop",
             "artist": "Q",
-            "genre" : ["alt rnb"],
+            "genre" : ["alt rnb", "soul"],
             "year" : "2020"
         },
         {
             "title" : "Drip or Drown",
             "artist": "Gunna",
-            "genre" : ["rap"],
+            "genre" : ["rap", "trap"],
             "year" : "2017"
         },
         {
@@ -32,25 +32,25 @@
         {
             "title" : "Thunder",
             "artist": "Roy Blair",
-            "genre" : ["bedroom pop"],
+            "genre" : ["bedroom pop", "indie"],
             "year" : "2017"
         },
         {
             "title" : "Bad Luck",
             "artist": "Brent Faiyaz",
-            "genre" : ["rnb"],
+            "genre" : ["rnb", "soul"],
             "year" : "2022"
         },
         {
             "title" : "Time Will Tell",
             "artist": "Bob Marley and The Wailers",
-            "genre" : ["reggae"],
+            "genre" : ["reggae", "soul"],
             "year" : "1978"
         },
         {
             "title" : "Outside",
             "artist": "Yeat",
-            "genre" : ["rap"],
+            "genre" : ["rap", "trap"],
             "year" : "2022"
         },
         {
@@ -62,7 +62,7 @@
         {
             "title" : "Venom",
             "artist": "Ravyn Lenae",
-            "genre" : ["rnb"],
+            "genre" : ["rnb", "alt rnb"],
             "year" : "2022"
         },
         {
